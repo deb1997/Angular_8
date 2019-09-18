@@ -1,0 +1,482 @@
+
+	- MongoDB is the ligth weigth DataBase.
+
+	- MongoDB Supports the JSON.
+
+	- As a MongoDB Developer we can perform CRUD Operations
+	  on JSON
+
+	- MongoDB follows the "mongodb" protocol.
+
+	- By Default MongoDB Running on port no.27017
+
+	- MongoDB follows the client server architecture.
+
+MongoDB Installation
+--------------------
+1) download and install MongoDB by visiting following website
+
+website : https://www.mongodb.com/download-center/community
+
+file    : mongodb-win32-x86_64-2008plus-ssl-4.0.10-signed.msi
+
+
+2) create the following directory structure
+
+C:/data/db
+
+	- above directory structure used to maintain the data
+	  backup
+
+
+3) set the path environmental variable
+
+	path = C:\Program Files\MongoDB\Server\4.0\bin
+
+
+MongoDB Queries
+---------------
+
+> mongod
+	- mongod is used to start the moongo server
+
+	- by default mongodb running on port no.27017
+
+	- by default mongodb follows the "mongodb" protocol
+
+
+> mongo
+	- it is used to connect to mongo server
+
+
+> show dbs;
+	- it will show available databases
+
+
+> use testdb;
+	- automatically "testdb" database will be created and
+	  switches also
+
+> db.createCollection("products");
+
+	- automatically "products" collection will be created.
+	  (table)
+
+> db.products.insert({p_id:111,p_name:'p_one',p_cost:10000})
+
+	- automatically json object will be inserted.
+
+> db.products.find();
+
+	- we can fetch the data from products collection.
+
+
+Step 1.
+	download the following node modules
+
+	=> express
+
+	=> mongodb@2.2.32
+
+	=> body-parser
+
+	=> cors
+
+		- "express" module used to develop the rest apis
+
+		- "mongodb@2.2.32" module used to interact with
+	           the mongodb database.
+
+		- "body-parser" module used to read the post
+	           parameters
+
+		- "cors" module used to enable the ports 
+	          communication
+
+
+	> yarn add express 
+		   mongodb@2.2.32 
+		   body-parser 
+		   cors --save
+
+
+Step 2.
+	Develop the Rest API'S by using NodeJS
+
+
+********************************
+MongoDB_CRUD
+	 fetch
+           fetch.js
+
+	 insert
+	   insert.js
+
+	 update
+	   update.js
+
+	 delete
+	   delete.js
+
+	 server.js
+*******************************
+
+	- "fetch.js" file used to fetch the data from products
+	  collection
+
+	- "insert.js" file used to insert the data in products
+	  collection
+
+	- "update.js" file used to update the data in products
+	  collection.
+
+	- "delete.js" file used to delete the data from products
+	  collection.
+
+	- "server.js" file is the main server file.
+
+
+Step 3.
+	Start the Servers
+
+> mongod
+
+> mongo
+
+> node server
+
+
+Step 4.
+	Test the following rest apis by using Postman
+
+
+=> http://localhost:8080/fetch   (GET)
+
+=> http://localhost:8080/insert  (POST)
+
+=> http://localhost:8080/update  (POST)
+
+=> http://localhost:8080/delete  (POST)
+
+
+		       ***** mongoose  *****
+
+
+ - "mongoose" module is the  3rd party node module used to
+   interact with the mongodb database with schema
+
+ - set of rules and regulations called as schema.
+
+ - we will download the mongoose module by using yarn.
+
+  > yarn add mongoose --save
+
+
+Step 1.
+	download the following node modules
+
+	=> express
+
+	=> mongoose
+
+	=> body-parser
+
+	=> cors
+
+		- express module used to develop the rest apis
+
+		- mongoose module used to interact with the
+	          mongodb database with schema
+
+		- body-parser module used to read the post
+	          parameters
+
+		- cors module used to enable the ports
+	          communication
+
+
+> yarn add express mongoose body-parser cors --save
+
+
+Step 2.
+	Develop the Rest API By Using NodeJS
+
+Ex.
+
+server.js
+
+
+Step 3.
+     Start the Servers
+
+
+> mongod
+
+> mongo
+
+> node server
+
+
+Step 4.
+	Test the following rest api by using Postman
+
+
+=> http://localhost:8080/register (POST)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

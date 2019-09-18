@@ -1,0 +1,63 @@
+<!-- <mat-grid-list cols = "4" rowHeight = "100px">
+  <mat-grid-tile [colspan] = "3" [rowspan] = "1">
+        Angular
+  </mat-grid-tile>
+  <mat-grid-tile [colspan] = "1" [rowspan] = "2">
+        React
+  </mat-grid-tile>
+  <mat-grid-tile [colspan] = "1" [rowspan] = "1">
+        VueJS
+  </mat-grid-tile>
+  <mat-grid-tile [colspan] = "2" [rowspan] = "1">
+        MEAN Stack
+  </mat-grid-tile>
+</mat-grid-list> -->
+<!--
+  "mat-grid-list" is the element type directive present
+   in "MatGridListModule"
+  
+  above directive used to make the webpage as 
+  Grid Layout 
+  
+  "mat-grid-tile" is the directive used to create the 
+  Grid Layout Element. 
+-->
+
+
+
+
+<!-- <mat-tab-group>
+  <mat-tab label = "About" [routerLink]="['/about']"> {{Page_One}} </mat-tab>
+  <mat-tab label = "Portfolio" [routerLink]="['/portfolio']"> {{Page_Two}} </mat-tab>
+  <mat-tab label = "Contact" [routerLink]="['/contact']"> {{Page_Three}} </mat-tab>
+</mat-tab-group> -->
+<!--
+  "mat-tab-group" is the element type direcive
+  "mat-tab-group" used to create the "tabs" 
+   in angular application
+  "mat-tab" is the element type directive, used to 
+  create the "tab" in tablist
+-->
+
+
+
+<mat-paginator [length] = "250"
+   [pageSize] = "10"
+   [pageSizeOptions] = "[10, 25,50,75,100]"
+   (page) = "pageEvent = $event">
+</mat-paginator>
+<div *ngIf = "pageEvent">
+   <h5>Page Change Event</h5>
+   <div>List length: {{pageEvent.length}}</div>
+   <div>Page size: {{pageEvent.pageSize}}</div>
+   <div>Page index: {{pageEvent.pageIndex}}</div>
+</div> 
+
+
+
+
+
+<!-- <button mat-button 
+        (click)="openSnackBar('Angular', '8')">
+        Show Toast
+</button> -->

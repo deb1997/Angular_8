@@ -1,0 +1,341 @@
+
+
+
+
+
+			***** Functions *****
+
+	- Particular business logic called as function.
+
+	- functions are used to reuse the business logic.
+
+	- we will define functions by using "function" keyword.
+
+	- we have 5 types of functions.
+
+		1) named functions
+
+		2) anonymous functions / arrow functions
+
+		3) rest parameters in functions
+
+		4) optional parameters in functions
+
+		5) default parameters in functions 
+
+
+			**** Named Functions ****
+
+	- The function with the name called as Named Function.
+
+Syntax
+------
+
+//function definition
+
+function functionname(arguments with datatype):returntype{
+
+	//business logic
+}
+
+//call the function
+
+functionname(parameters)
+		**** Anonymous Functions ****
+
+	- The function without name called as Anonymous Function
+
+	- Anonymous Functions also called as Arrow Functions
+
+	- Arrow functions we will represent by using => symbol
+
+	- Arrow functions are more secured compared to named
+	  functions.
+
+	- Arrow functions utilizes the heap memory efficiently
+
+
+Syntax
+------
+
+//function definition
+var / let / const variablename = (arguments with datatype)
+					:returntype => {
+
+	//business logic
+}
+
+//call the function
+variablename(parameters)
+		*** Rest Parameters in Functions ***
+
+	- "..." representing rest parameter in functions
+
+	- "..." also called as spread operator
+
+	- rest parameter have the capability to store multiple
+	  parameters.
+
+	- position of rest argument should be the "last
+	  in arguments"
+
+	- we can't have more than one rest argument.
+
+
+
+		*** Optional Parameters in Functions ***
+
+	- we will represent optional parameters with "?"
+
+			**** JSON ****
+
+	- JSON Stands for Java Script Object Notation.
+
+	- JSON also called as JavaScript Objects.
+
+	- JSON used to share the data over the network.
+
+	- JSON is Network Friendly Format.
+
+	- JSON is ligth weigth compared to XML.
+
+Syntax.
+------
+
+	Objects   ---   { }
+
+	Arrays    ---   [ ]
+
+	data      ---   key & value pairs
+
+			key & value separated by using ":"
+
+			key & value pairs separated by using ","
+
+
+			**** Classes ****
+	- encapsulation of variables and functions called as
+	  class.
+
+	- we will declare classes by using "class" keyword.
+
+	- we will create the object to the class by using 
+	  "new" keyword.
+
+	- we will define constructor by using "constructor"
+	  keyword.
+
+	- the recomended modifier for variables is "private"
+
+	- the recomended modifier for functions is "public".
+
+			*** Inheritance ***
+
+	- getting the "properties and functions" from parent
+	  class to child class called as inheritance.
+
+	- we will implement inheritance by using "extends"
+	  keyword.
+
+
+Single Level Inheritance
+------------------------
+
+multilevel inheritance
+----------------------
+
+
+		**** Series  & Parallel Calls ****
+
+
+URL_1 : https://restcountries.eu/rest/v2/all
+
+URL_2 : https://www.w3schools.com/angular/customers.php
+
+
+	- Executing the Service calls with dependencies
+	  between them called as Series calls.
+
+	- Executing the Service Calls without dependencies
+	  Between Them Called as Parallel Calls
+
+	- To make Parallel Calls we need following module
+		"rxjs-compat"
+
+	- we will download above module by using yarn tool
+		> yarn add rxjs-compat --save
+
+
+**********************************************
+preSer4
+     src
+       app
+	 urls
+	   urls.ts
+	 error
+	   errCallBack.ts
+	 services
+	    countries.service.ts
+	    customers.service.ts
+
+	 components
+	    series.component.ts
+	    series.component.html
+
+	    parallel.component.ts
+	    parallel.component.html
+	 app.module.ts
+       index.html
+**********************************************
+
+
+urls.ts
+-------
+const URLS:any = {
+
+	COUNTRIES : "https://restcountries.eu/rest/v2/all",
+	CUSTOMERS:"https://www.w3schools.com/
+  		   angular/customers.php"
+};
+export default URLS;
+
+errCallBack.ts
+--------------
+import { HttpErrorResponse } from "@angular/common/http";
+let errCallBack = (err:HttpErrorResponse):any=>{
+	if(err.error instanceof Error){
+	   console.log("client side error");
+	}else{
+	   console.log("server side error");
+	};
+};
+export default errCallBack;
+
+			**** Post Request ****
+
+URL : http://test-routes.herokuapp.com/test/uppercase
+
+
+			**** Interceptors ****
+
+	- Interceptors are used to authenticate the Http Requests.
+
+	- If Http Request is Authenticated, then it will bypass to
+	  Server.
+
+	- Interceptors receives the Http Requests from Services
+	  and validates and bypass to Servers.
+
+
+URL: https://restcountries.eu/rest/v2/all
+
+
+*****************************************
+preSer6
+      src
+	app
+	  urls
+	    urls.ts
+
+	  error
+	    errCallBack.ts
+
+	  services
+	    countries.service.ts
+
+	  components
+	    countries.component.ts
+	    countries.component.html
+
+	  interceptors
+	     my.interceptor.ts
+
+	  app.module.ts
+	index.html
+*******************************************
+
+
+			**** Dot Net Integration ****
+
+	- we are using "SQLServer" as DataBase in this project.
+
+	- Below are the following details of SQLServer.
+
+	  *******************************
+	  Login  :  sa
+
+	  password: 123
+
+	  server  : localhost
+
+	  DataBase : rsn
+
+	  table    : employees
+	  *******************************
+
+	- "DotNetCRUD" is the dotnet web api application.
+
+	- above dot net application connect to SQL Server and returns
+	  the "employees" data in the form of a JSON.
+
+	- below URL Representing the Rest API Call of DotNetCRUD 
+	  application
+
+	URL : http://localhost:23336/api/Webapi/fetch
+
+
+************************************
+preSer7
+     src
+       app
+	 urls
+	   urls.ts
+
+	 error
+	   errCallBack.ts
+
+	 services
+	   webapi.service.ts
+
+	 components
+	   webapi.component.ts
+	   webapi.component.html
+
+	 app.module.ts
+        index.html
+************************************
+
+> ng g s services/webapi --skipTests
+
+
+> ng g c components/webapi --skipTests -is --selector=wepapi --flat true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

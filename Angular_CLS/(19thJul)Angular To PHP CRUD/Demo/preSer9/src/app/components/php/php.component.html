@@ -1,0 +1,26 @@
+<table border="1"
+       cellpadding="10px"
+       cellspacing="10px"
+       align="center"
+       style="font-size: 20px;text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+    <thead style="background-color: burlywood">
+        <tr>
+            <th>SNO</th>
+            <th>ENO</th>
+            <th>ENAME</th>
+            <th>SAL</th>
+            <th>ADDRS</th>
+            <th>DEPT</th>
+        </tr>
+    </thead>
+    <tbody style="background-color: coral">
+        <tr *ngFor="let x of result;let i = index">
+            <td>{{i+1}}</td>
+            <td>{{x.eno}}</td>
+            <td>{{x.ename}}</td>
+            <td>{{x.sal}}</td>
+            <td>{{x.addrs}}</td>
+            <td>{{x.dept}}</td>
+        </tr>
+    </tbody>
+</table>

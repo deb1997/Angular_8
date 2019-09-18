@@ -1,0 +1,34 @@
+			 **** Java Integration ****
+
+	- "EmployeeDetailRestResource" is the Java Web Services
+	  Application.
+
+	- "EmployeeDetailRestResource" application deployed into
+	  Tomcat Server.
+
+	- Above Java Application gives the XML As Response.
+
+	- Below URL Representing the Absolute Path of Java Application
+	  in Tomcat Server.
+
+	URL : http://localhost:9090/EmployeeDetailRestResource/api/empService/getAll
+
+	- we will integrate above rest api call by using HttpClient
+
+
+***************************************
+preSer8
+     src
+       app
+	 urls
+	   urls.ts 
+	 error
+	   errCallBack.ts
+	 services
+	   employee.service.ts
+	 components
+	   employee.component.ts
+	   employee.component.html
+	 app.module.ts
+       index.html
+**************************************

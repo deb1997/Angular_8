@@ -1,0 +1,26 @@
+<!--
+   $event is the predefined object in Angular
+   $event containes "event" data
+   in this case event data is 
+         @name
+         @calories
+         @fat
+         @carbs
+         @protein
+-->
+<table matSort (matSortChange) = "sortFood($event)">
+  <tr>
+     <th mat-sort-header = "name">Dessert</th>
+     <th mat-sort-header = "calories">Calories</th>
+     <th mat-sort-header = "fat">Fat</th>
+     <th mat-sort-header = "carbs">Carbs</th>
+     <th mat-sort-header = "protein">Protein</th>
+  </tr>
+  <tr *ngFor = "let food of sortedFood">
+     <td>{{food.name}}</td>
+     <td>{{food.calories}}</td>
+     <td>{{food.fat}}</td>
+     <td>{{food.carbs}}</td>
+     <td>{{food.protein}}</td>
+  </tr>
+</table>

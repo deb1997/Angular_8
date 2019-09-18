@@ -1,0 +1,20 @@
+<table border="1"
+       cellpadding="10px"
+       cellspacing="10px"
+       align="center"
+       style="font-size: 30px">
+    <thead style="background-color: gray">
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>SAL</th>
+        </tr>
+    </thead>    
+    <tbody>
+        <tr *ngFor="let x of result">
+            <td>{{x.e_id}}</td>
+            <td>{{x.e_name}}</td>
+            <td>{{x.e_sal}}</td>
+        </tr>
+    </tbody>
+</table>

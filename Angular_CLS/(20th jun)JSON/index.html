@@ -1,0 +1,130 @@
+<!-- <!DOCTYPE html>
+<html>
+    <script>
+        let obj = {
+            sub_one  :  "Angular8",
+            sub_two  :  "NodeJS",
+            sub_three:  "MongoDB"
+        };
+        document.write(obj.sub_one+"<=>"+
+                      obj.sub_two+"<=>"+
+                      obj.sub_three)
+    </script>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+    <script>
+        let dbData = {
+            oracle : ()=>{ return "Oracle Data Soon...!"},
+            mysql  : ()=>{ return "MySQL Data Soon...!"},
+            mongodb: ()=>{ return "MongoDB Data Soon...!"},
+            cassandra:()=>{return "Cassandra Data Soon...!"}
+        };  
+        document.write(dbData.oracle() +"<br>"+
+                       dbData.mysql() + "<br>"+
+                       dbData.mongodb() + "<br>"+
+                       dbData.cassandra());
+    </script>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+    <script>
+        let dbFun = ()=>{
+            return{
+                getConnection : ()=>{
+                    return "DataBase Connection Soon...!"
+                }
+            };
+        };
+
+        document.write( dbFun().getConnection() );
+    </script>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+    <script>
+        let obj = {p_id:111};
+        console.log(obj);   //{p_id: 111}
+        Object.freeze(obj);
+        console.log(obj);   //{p_id: 111}
+        obj.p_id = 222;
+        console.log(obj);   //{p_id: 111}
+        obj.p_name = "p_one";
+        console.log(obj);   //{p_id: 111}
+    </script>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+    <script>
+        let obj = {p_id:111};
+        Object.seal(obj);
+        obj.p_id = 222;
+        console.log(obj);   //{p_id: 222}
+        obj.p_name = "p_one";
+        console.log(obj);   //{p_id: 222}
+    </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

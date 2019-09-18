@@ -1,0 +1,207 @@
+    **** Login Authentication with MySQL and JWT-Simple Module ****
+
+
+  - "mysql" is the node module used to interact with the mysql
+    database
+
+  - "jwt-simple" module used to generate the tokens.
+
+  - in general we will use these tokens for authentication purpose.
+
+
+
+MySQL Queries
+-------------
+
+Default Password    :   root
+
+
+> show databases;
+	- it will show the available databases.
+
+> create schema testdb;
+	- it will create "testdb" database.
+
+> use testdb;
+	- we can switch to "testdb" database.
+
+> create table login_details(uname varchar(20),upwd varchar(20));
+	- automatically "login_details" table created.
+
+> insert into login_details values("admin","admin");
+	- automatically we can insert the data in "login_details"
+	  table.
+
+> select * from login_details;
+	- automatically we can fetch the data from login_details
+	  table.
+
+
+*******************************
+host	:	localhost
+
+user	:	root
+
+password:	root
+
+database:	testdb
+
+table	:	login_details
+*******************************
+
+
+1) download the following node modules
+
+	=> express
+
+	=> mysql
+
+	=> body-parser
+
+	=> cors
+
+	=> jwt-simple
+
+		- express module used to develop the rest apis
+
+		- mysql module used to interact with the mysql
+	          database.
+
+		- "body-parser" module used to read the post
+	          parameters.
+
+		- "cors" module used to enable the ports 				   communication
+
+		- "jwt-simple" module used to generate the tokens
+
+
+	> yarn add express mysql body-parser cors jwt-simple --save
+
+
+Step 2.
+	Develop the Rest API by using NodeJS
+
+
+************************************
+Login
+   config
+      imports.js
+      db_properties.js
+      db_connection.js
+   token
+       generateToken.js
+   login
+	login.js
+   server.js
+***********************************
+
+	- "imports.js" file used to maintain all the imports
+
+	- "db_properties.js" file used to maintain the database
+	   properties.
+
+	- "db_connection.js" file used to create and return the 
+	   mysql connection object.
+
+	- "generateToken.js" file used to generate the token by
+	   using jwt-simple module.
+
+	- "login.js" file used to develop the login rest api
+
+	- "server.js" file is the main server file
+
+Step 3.
+	Start the server
+
+> nodemon server
+
+
+Step 4.
+	Test the rest api by using Postman
+
+=> http://localhost:8080/login
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

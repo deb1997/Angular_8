@@ -1,0 +1,22 @@
+XML Template
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employee>
+    <addrs>Odisha</addrs>
+    <dept>RND</dept>
+    <ename>Ameer</ename>
+    <eno>156</eno>
+    <sal>76500</sal>
+</employee>
+
+JSON Template
+
+     {
+        "eno": 102,
+        "ename": "Biswa",
+        "sal": 65768,
+        "addrs": "Rourkela",
+        "dept": "Finance"
+      },
+
+

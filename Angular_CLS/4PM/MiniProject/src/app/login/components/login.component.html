@@ -1,0 +1,17 @@
+<fieldset>
+    <legend>Login</legend>
+    <form (ngSubmit)="login({'uname':uname,'upwd':upwd
+})">
+        <label style="margin-right: 100px">Uname:</label>
+        <input type="text"
+               name="uname"
+               [(ngModel)]="uname">
+        <br><br>
+        <label style="margin-right: 100px">Upwd:</label>
+        <input type="password"
+               name="upwd"
+               [(ngModel)]="upwd">   
+        <br><br>
+        <input type="submit" value="Login">
+    </form>
+</fieldset>

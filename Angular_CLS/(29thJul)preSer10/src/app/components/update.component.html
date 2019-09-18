@@ -1,0 +1,26 @@
+<fieldset>
+    <legend>Update</legend>
+    <form (ngSubmit)="update({
+        p_id:_id,
+        p_name:_name,
+        p_cost:_cost
+    })">
+        <label style="margin-right: 100px">P_ID</label>
+        <input type="number" name="p_id" [(ngModel)]="_id">
+
+        <br><br>
+        <label style="margin-right: 100px">P_NAME</label>
+        <input type="text" name="p_name" [(ngModel)]="_name">
+        
+        <br><br>
+        <label style="margin-right: 100px">P_COST</label>
+        <input type="number" name="p_cost" [(ngModel)]="_cost">
+
+        <br><br>
+
+        <input type="submit" value="Update">
+
+        <br><br>
+        <h1>{{status | json}}</h1>
+    </form>
+</fieldset>

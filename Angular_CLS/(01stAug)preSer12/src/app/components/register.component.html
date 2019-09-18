@@ -1,0 +1,127 @@
+<!--
+    "container" is the bootstrap class
+    "container" class used to display content based on screen dimensions
+-->
+<div class="container">
+    <!--
+        - [formGroup] is the predefined directive
+        - [formGroup] directive used to assign the logical name to forms
+        - where "employeeDetails" is the logical name of form
+        - (ngSubmit) also angular directive
+        - when ever we click the submit button automatically coresponding function will be executed
+        - when ever we click the submit button automatically "register()" function will be executed
+    -->
+  <form [formGroup]="employeeDetails" (ngSubmit)="register()">
+        <!--
+            formControlName is the directive
+            formControlName used to create the form element
+        -->
+        <!-- First Name-->
+        <div class="form-group">
+            <label>First Name.</label>
+            <input type="text"
+                   class="form-control"
+                   name="fname"
+                   formControlName="fname"
+                   required>
+        </div>
+        <div *ngIf="employeeDetails.controls['fname'].hasError('required')" class="alert alert-danger">
+            *** can't left blank ***
+        </div>
+        <div *ngIf="employeeDetails.controls['fname'].hasError('minlength')" class="alert alert-danger">
+            *** minimum 3 characters are required ****
+        </div>
+        <div *ngIf="employeeDetails.controls['fname'].hasError('maxlength')" class="alert alert-danger">
+            *** maximum 6 characters are allowed ***
+        </div>
+
+        <!--Last Name-->
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text"
+                   class="form-control"
+                   name="lname"
+                   formControlName="lname">
+        </div>
+
+        <!--Email-->
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email"
+                   class="form-control"
+                   name="email"
+                   formControlName="email">
+        </div>
+
+        <!--Mobile-->
+        <div class="form-group">
+            <label>Mobile</label>
+            <input type="text"
+                   class="form-control"
+                   name="mobile"
+                   formControlName="mobile">
+        </div>
+
+        <!--Age-->
+        <div class="form-group">
+            <label>Age</label>
+            <input type="number"
+                   class="form-control"
+                   name="age"
+                   formControlName="age">
+        </div>
+
+        <!--DOB-->
+        <div class="form-group">
+            <label>DOB</label>
+            <input type="date"
+                   class="form-control"
+                   name="dob"
+                   formControlName="dob">
+        </div>
+
+        <!-- Gender  -->
+        <div class="form-group">
+            <label>Gender</label>
+            <input type="radio"
+                   name="gender"
+                   value="male"
+                   formControlName="gender"
+                   class="form-control">Male
+            <input type="radio"
+                   name="gender"
+                   value="female"
+                   formControlName="gender"
+                   class="form-control">Female
+        </div>
+
+        <!--City-->
+        <div class="form-group">
+            <label>City</label>
+            <input type="text"
+                   class="form-control"
+                   name="city"
+                   formControlName="city">
+        </div>
+
+        <!--Country-->
+        <div class="form-group">
+            <label>Country</label>
+            <select class="form-control"
+                    name="country"
+                    formControlName="country">
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">London</option>
+                <option value="japan">Japan</option>
+                <option value="china">China</option>
+            </select>
+        </div>
+        <!-- Submit Button -->
+        <div class="form-group" align="center">
+            <input type="submit" class="btn btn-success">
+        </div>
+       
+        <h1>{{result | json}}</h1>
+  </form>
+</div>

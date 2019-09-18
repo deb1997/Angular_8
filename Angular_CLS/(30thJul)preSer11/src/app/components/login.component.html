@@ -1,0 +1,24 @@
+<div class="container">
+    <form (ngSubmit)="login({'uname':uname,'upwd':upwd})">
+        <div class="form-group">
+            <label>Uname.</label>
+            <input type="text"
+                   name="uname"
+                   class="form-control"
+                   [(ngModel)]="uname">
+        </div>
+        <div class="form-group">
+            <label>Upwd.</label>
+            <input type="password"
+                   name="upwd"
+                   class="form-control"
+                   [(ngModel)]="upwd">
+        </div>
+        <div class="form-group" align="center">
+            <input type="submit" 
+                   value="Login" 
+                   class="btn btn-success">
+        </div>
+        <h1>{{result | json}}</h1>
+    </form>
+</div>

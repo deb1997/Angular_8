@@ -1,0 +1,40 @@
+1) create the angular application
+> ng new preSer10
+
+2) create the services
+    ***************************************
+    preSer10
+            src
+               app
+                    urls
+                        urls.ts
+                    error
+                        errCallBack.ts
+    **************************************
+    > ng g s services/fetch --skipTests
+    > ng g s services/insert --skipTests
+    > ng g s services/update --skipTests
+    > ng g s services/delete --skipTests
+
+3) generate the components
+
+    > ng g c components/fetch --skipTests -is --selector=fetch --flat true
+
+    > ng g c components/insert --skipTests -is --selector=insert --flat true
+
+    > ng g c components/update --skipTests -is --selector=update --flat true
+
+    > ng g c components/delete --skipTests -is --selector=delete --flat true
+
+
+
+
+
+
+
+
+
+
+
+
+

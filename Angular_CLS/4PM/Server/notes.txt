@@ -1,0 +1,181 @@
+1) make the mysql database ready.
+    - we will use mysql database for both authentication as well as about module data.
+*******************************************
+host    :   localhost
+
+user    :   root
+
+password:   root
+
+database:   miniproject
+
+tables  :   login_details
+            about
+*******************************************
+
+2) make the mongodb database ready
+    - we will use mongodb database for portfolio module.
+
+******************************
+host    :   localhost
+
+protocol:   mongodb
+
+port    :   27017
+
+database:   miniproject
+
+collection: portfolio
+******************************
+
+3) make the SQLServer ready
+    - we will use SQLServer for contact module
+
+******************************************
+server      :   localhost
+user        :   sa
+password    :   123
+database    :   miniproject
+table       :   contact
+*****************************************
+
+4) download the following node modules
+
+    => express
+    => mysql
+    => mongodb@2.2.32
+    => mssql
+    => body-parser
+    => cors
+    => jwt-simple
+
+            - "express" module used to develop the rest apis
+            - "mysql" module used to interact with the mysql database
+            - "mongodb@2.2.32" module used to interact with the mongodb database
+            - the stable version of mongodb module is 2.2.32
+            - "mssql" module used to interact with the SQLServer.
+            - "body-parser" module used to read the post parameters
+            - "cors" module used to enable the ports communication
+            - "jwt-simple" module used to generate the tokens
+
+> yarn add express 
+           mysql 
+           mongodb@2.2.32 
+           mssql 
+           body-parser 
+           cors 
+           jwt-simple --save
+
+
+5) develop the rest apis by using nodejs
+
+********************************************************
+MiniProject
+        config
+            imports.js
+            mysql_properties.js
+            mssql_properties.js
+            mysql_connection.js
+            token.js
+            generateToken.js
+            auth.js
+        login
+            login.js
+        about   
+            about.js
+        portfolio
+            portfolio.js
+        contact 
+            contact.js
+        logout
+            logout.js
+        server.js
+*******************************************************
+
+
+6. start the servers
+
+> nodemon server
+
+> mongod
+
+
+7.
+    => http://localhost:8080/login  (POST)
+
+    => http://localhost:8080/about  (GET)
+
+    => http://localhost:8080/portfolio   (GET)
+
+    => http://localhost:8080/contact     (GET)
+
+    => http://localhost:8080/logout      (GET)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

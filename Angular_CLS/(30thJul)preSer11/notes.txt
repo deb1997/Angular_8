@@ -1,0 +1,23 @@
+1) Start the Node Server
+
+    => navigate to "Login" directory
+
+    Ex.
+        G:/Login>
+
+    => execute the following commnad
+
+        Ex.
+            nodemon server
+        automatically node server starts on port no.8080
+
+2) test the following rest api by using Postman
+
+    => http://localhost:8080/login    (POST)
+
+
+3) create the angular application
+
+    > ng g s services/login --skipTests
+
+    > ng g c components/login --skipTests -is --selector=login --flat true

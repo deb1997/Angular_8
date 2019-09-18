@@ -1,0 +1,27 @@
+<table border="1"
+       cellpadding="10px"
+       cellspacing="10px"
+       align="center"
+       style="font-size: 20px;background-color: cadetblue">
+    <thead style="background-color: chocolate">
+        <tr>
+            <th>SNO</th>
+            <th>ENO</th>
+            <th>ENAME</th>
+            <th>ADDRS</th>
+            <th>DEPT</th>
+            <th>SAL</th>
+        </tr>
+    </thead>
+    <hr>
+    <tbody style="background-color: coral;text-align: center">
+        <tr *ngFor="let x of result;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{x.eno}}</td>
+            <td>{{x.ename}}</td>
+            <td>{{x.addrs}}</td>
+            <td>{{x.dept}}</td>
+            <td>{{x.sal}}</td>
+        </tr>
+    </tbody>
+</table>

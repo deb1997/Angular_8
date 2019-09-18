@@ -1,0 +1,234 @@
+			**** Single Page Applications ****
+
+	- loading one template to another template without refreshing
+	  the whole webpage called as single page application.
+
+	- loading one template to another template in single page 
+	  application called as Routing.
+
+	- "Routes" is the predefined class in angular,used to 
+	  implement the Routing.
+
+	- we will load "Routes" into framework by using "RouterModule"
+
+	- "Router" is the Predefined class used to define the 
+	  navigation URLS in Single page applications.
+
+	- "Routes", "RouterModule" and "Router" available in
+	   "@angular/router" package.
+
+
+Step 1.
+	create the components
+
+
+		- in our application we have following Components
+			1) IndexComponent
+			2) PageoneComponent
+			3) PagetwoComponent
+			4) PagethreeComponent
+
+		- where "IndexComponent" is the main component.
+
+		- where "PageoneComponent","PagetwoComponent" and
+		  "PagethreeComponent" are target components.
+
+	> ng g c components/index --skipTests -is --selector=index --	          flat true
+
+	> ng g c components/pageone --skipTests -is --	  	  	  	  selector=pageone --flat true
+
+	> ng g c components/pagetwo --skipTests -is --selector=pagetwo
+	  --flat true
+
+	> ng g c components/pagethree --skipTests -is --	  	  	  selector=pagethree --flat true
+
+
+Step 2.
+	implement the business logic in target components
+
+
+
+Step 3.
+	implement the "presentation logic" in main component template
+
+
+
+Step 4.
+	implement the Routing
+
+	"/page_one"   ===>   PageoneComponent
+
+	"/page_two"   ===>   PagetwoComponent
+
+	"/page_three" ===>   PagethreeComponent
+
+**************************************
+spaDemo1
+      src
+	app
+	  routes
+	     app.routes.ts
+**************************************
+
+
+Step 5.
+	load Routes into Framework
+
+
+
+Steps to implement the Nested Routing
+-------------------------------------
+
+1) create the Components
+
+	
+2) implement the business logic in nested components
+
+
+3) create the hyperlinks
+
+
+4) implement the routing
+
+			**** Route Guards ****
+
+
+1) CanActivate
+
+	- "CanActivate" is the Route Guard in Single Page Application
+
+	- "CanActivate" is the predefined interface.
+
+	- "canActivate()" is the unimplemented boolean method in 
+	   "CanActivate" interface.
+
+	- "CanActivate" route guard used to give the permission
+	   to enter into main routes.
+
+
+2) CanDeactivate
+
+	- "CanDeactivate" is the Route Guard in Single Page
+	   Application
+
+	- "CanDeactivate" also predefined interface.
+
+	- canDeactivate() is the unimplemented boolean method in 
+	  "CanDeactivate" interface.
+
+	- "CanDeactivate" interface used to give the permission to
+	   leave main routes.
+
+
+
+3) CanActivateChild
+
+	- "CanActivateChild" is also Route Guard in Single Page
+	  Application
+
+	- "CanActivateChild" also predefined interface.
+
+	- canActivateChild() is the unimplemented boolean method in
+	  "CanActivateChild" interface.
+
+	- "CanActivateChild" interface used to give the permission to
+	  enter into child routes.
+
+
+********************************
+spaDemo1
+      src
+	app
+	  guards
+	     auth.guards.ts
+********************************
+
+
+     ***** Implementation of Lazy Loading Application *****
+
+
+1) generate the components
+
+
+	> ng g c components/index --skipTests -is --selector=index --flat true
+
+	> ng g c components/pageone --skipTests -is --selector=pageone --flat true
+
+
+
+
+2) generate the CountryModule 
+
+
+	=> ng g c countries/components/countries 
+	   --skipTests
+	   -is
+	   --selector=countries
+	   --flat true
+
+	=> ng g s countries/services/countries
+	   --skipTests
+
+	=> ng g m countries/module/countries
+	   --skipTests
+
+
+3) implement the CanLoad Permission
+
+
+*****************************
+spaDemo2
+      src
+	app
+	  auth
+	    auth.guard.ts
+*****************************
+
+
+4) implement the routig
+
+
+****************************
+spaDemo2
+      src
+	app
+	  routes
+	     app.routes.ts
+****************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

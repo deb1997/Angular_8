@@ -1,0 +1,11 @@
+<fieldset>
+    <legend>Delete</legend>
+    <form (ngSubmit)="remove({p_id:id_})">
+        <label style="margin-right: 100px">P_ID</label>
+        <input type="number" name="p_id" [(ngModel)]="id_">
+        <br><br>
+        <input type="submit" value="Delete">
+        <br><br>
+        <h1>{{status | json}}</h1>
+    </form>
+</fieldset>

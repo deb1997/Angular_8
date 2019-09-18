@@ -1,0 +1,17 @@
+1. Start the node server
+    navigate to "Register" directory
+    Ex.
+        G:/Register>
+    execute the following command
+        > nodemon server
+    automatically node server will start on port no.8080 
+
+2) start the mongo server
+    > mongod
+        - automatically mongo server will start on port no.27017
+    > mongo
+        - we can connect to mongo server as a client
+
+3) test the following rest api by using Postman
+
+    => http://localhost:8080/register  (POST)

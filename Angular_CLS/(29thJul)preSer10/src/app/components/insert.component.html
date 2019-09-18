@@ -1,0 +1,27 @@
+<fieldset>
+    <legend>Insert</legend>
+    <form (ngSubmit)="insert({
+        'p_id':p_id,
+        'p_name':p_name,
+        'p_cost':p_cost
+    })">
+        <label style="margin-right: 100px">P_ID</label>
+        <input type="number"
+               name="p_id"
+               [(ngModel)]="p_id">
+        <br>
+        <label style="margin-right: 100px">P_NAME</label>
+        <input type="text"
+               name="p_name"
+               [(ngModel)]="p_name">
+        <br>
+        <label style="margin-right: 100px">P_COST</label>
+        <input type="number"
+               name="p_cost"
+               [(ngModel)]="p_cost">
+        <br>
+        <input type="submit" value="Insert">
+        <br>
+        <h1>{{status | json}}</h1>
+    </form>   
+</fieldset>

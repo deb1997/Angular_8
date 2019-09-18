@@ -1,0 +1,23 @@
+<table border="1"
+       cellpadding="10px"
+       cellspacing="10px"
+       align="center"
+       style="background-color: black;color: red;
+              font-size: 30px">
+       <thead>
+            <tr>
+                <th>SNO</th>
+                <th>NAME</th>
+                <th>CITY</th>
+                <th>COUNTRY</th>
+            </tr>
+       </thead>
+       <tbody>
+           <tr *ngFor="let x of result.records;let i=index">
+                <td>{{i+1}}</td>
+                <td>{{x.Name}}</td>
+                <td>{{x.City}}</td>
+                <td>{{x.Country}}</td>
+           </tr>
+       </tbody>
+</table>

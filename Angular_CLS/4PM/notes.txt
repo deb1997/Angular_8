@@ -1,0 +1,80 @@
+we will divide project into 3 Modules.
+
+1) Login Module
+
+2) Dashboard Module
+
+3) Main Module  (AppModule)
+
+                ******* Login Module  ********
+
+**********************************************
+MiniProject
+         src
+           app
+             urls
+                urls.ts
+             error
+                errCallBack.ts
+             login
+                service
+                    login.service.ts
+                components
+                    login.component.ts
+                    login.component.html
+                module
+                    login.module.ts
+***********************************************
+
+
+            ***** Dashboard Module *****
+******************************************
+MiniProject
+         src
+           app
+            dashboard
+             services
+                about.service.ts
+                portfolio.service.ts
+                contact.service.ts
+                logout.service.ts
+             components
+                about.component.ts
+                portfolio.component.ts
+                contact.component.ts
+                about.component.html
+                portfolio.component.html
+                contact.component.html
+                dashboard.component.ts
+                dashboard.component.html
+            module
+                dashboard.module.ts
+**********************************************
+
+**********************Main Module**************
+MiniProject
+          src
+            app
+               index.component.ts
+               index.component.html
+
+               fetch.token.service
+               my.interceptor.ts
+
+               app.module.ts
+**********************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

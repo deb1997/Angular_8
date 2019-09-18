@@ -1,0 +1,146 @@
+<!--
+    - ajax is used to make the asynchronus calls.
+    - we will make ajax calls by using jquery library.
+    - we will include jquery by using CDN.
+-->
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+           $.ajax({
+               method:"GET",
+               url : "https://restcountries.eu/rest/v2/all",
+               success : (posRes)=>{
+                    console.log(posRes);
+               },
+               error : (errRes)=>{
+                    console.log(errRes);
+               }
+           })
+        </script>
+    </body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            $.ajax({
+                method : "GET",
+                url : "https://www.w3schools.com/angular/customers.php",
+                success : (posRes)=>{
+                    let obj = JSON.parse(posRes);
+                    console.log(obj);
+                },
+                error : (errRes)=>{
+                    console.log(errRes);
+                }   
+            })
+        </script>
+    </body>
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            $.ajax({
+                method:"POST",
+                url : "http://test-routes.herokuapp.com/test/uppercase",
+                data : {'message':'mean stack development'},
+                success : (posRes)=>{
+                    console.log(posRes);
+                },
+                error : (errRes)=>{
+                    console.log(errRes);
+                }
+            })
+        </script>
+    </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+           let my_promise = new Promise((resolve,reject)=>{
+                $.ajax({
+                    method : "GET",
+                    url : "http://test-routes.herokuapp.com/test/hello",
+                    success : (posRes)=>{
+                        setTimeout(()=>{
+                            resolve(posRes);
+                        },10000);
+                    },
+                    error : (errRes)=>{
+                        setTimeout(()=>{
+                            reject(errRes);
+                        },5000);
+                    }
+                })
+           });
+           my_promise.then((res)=>{
+            console.log(res);
+           },(err)=>{
+            console.log(err);
+           });
+        </script>
+    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            let my_promise = new Promise((resolve,reject)=>{
+                $.ajax({
+                    url : "https://www.w3schools.com/angular/customers.php",
+                    success : (posRes)=>{
+                        resolve(posRes);
+                    },
+                    error:(errRes)=>{
+                        reject(errRes);
+                    }
+                })
+            });
+            async function myFun(){
+                let result = await my_promise;
+                console.log(result);
+            };
+            myFun();
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

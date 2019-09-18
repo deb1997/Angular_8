@@ -1,0 +1,11 @@
+101    Binayak      Odisha         RND         76500
+102    Biswa        Rourkela       Finance     65768
+105    Ravi         Pune           HR          88500
+110    Akash        Mp             RND         76500
+112    Rohit        Rajasthan      Finance     78000
+143    Kumar        Hyderabad      Testing     45000
+127    Nitesh       Odisha         RND         76500
+115    Alok         Bangalore      Testing     54000
+108    Ajay         Odisha         Finance     78000
+122    Naresh       Hyderabad      HR          88500
+131    Dipankan     Bihar          Testing     45000

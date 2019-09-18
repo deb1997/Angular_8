@@ -1,0 +1,598 @@
+      **** MiniProject Implementation By Using NodeJS ****
+
+
+Step 1.
+
+	make the mysql database ready
+
+
+		- we will use mysql database for both "login 	authentication" as well as "about" module
+
+> Default Password   :   root
+
+> create schema miniproject;
+
+> use miniproject;
+
+> create table login_details(uname varchar(20),
+			     upwd varchar(20));
+
+> insert into login_details values("admin","admin");
+
+> create table about(sno integer,sub varchar(20));
+
+> insert into about values(1,"AngularJS");
+
+> select * from login_details;
+
+> select * from about;
+
+
+********************************************
+host		:	localhost
+
+user		:	root
+
+password	:	root
+
+database	:	miniproject
+
+tables		:	login_details
+		        about
+********************************************
+
+
+
+Step 2
+	make the mongodb database ready
+
+		=> we will use mongodb database for portfolio
+	           module
+
+download and install mongodb
+----------------------------
+
+website : https://www.mongodb.com/download-center/community
+
+file    : mongodb-win32-x86_64-2008plus-ssl-4.0.10-signed.msi
+
+
+create the following directory structure
+----------------------------------------
+C:/data/db
+
+	- this directory structure used to maintain the data
+	  backup
+
+
+set the path environmental variable
+-----------------------------------
+
+path = C:\Program Files\MongoDB\Server\4.0\bin
+
+
+MongoDB Queries
+---------------
+
+> mongod
+
+	- above command used to start the mongo server.
+
+	- by default mongo server running on port no.27017
+
+	- by default mongo server follows the "mongodb" protocol
+
+
+> mongo
+
+	- above command used to connect to server
+
+
+> show dbs;
+
+	- it will show available databases.
+
+
+> use miniproject;
+
+	- automatically miniproject database will be created and
+	  switches also
+
+
+> db.createCollection("portfolio");
+
+	- automatically portfolio table(collection) will be 
+	  created.
+
+> db.portfolio.insert( {sno:1,sub:'react',demand:'high'} );
+
+	- automatically record(JSON Object) will be inserted.
+
+
+> db.portfolio.find();
+
+	- we can fetch the data from portfolio collection
+
+
+*********************************************
+protocol   :   mongodb
+
+
+port       :   27017
+
+
+database   :   miniproject
+
+
+collection :   portfolio
+
+
+host	   :   localhost
+*********************************************
+
+
+Step 3.
+	make the SQLServer Ready
+
+	    - we will use SQLServer for contact Module
+
+Name : SQL Server 2014 Management Studio
+
+
+**************************************
+
+server	:	localhost
+
+user	:	sa
+
+password:	123
+
+database:	miniproject
+
+table   :       contact
+
+***************************************
+
+Step 4.
+	create the Directory for Server Implementation
+
+
+Ex.
+	MiniProject
+
+
+
+Step 5.
+	download the following node modules
+
+	=> express
+
+	=> mysql
+
+	=> mongodb@2.2.32
+
+	=> mssql
+
+	=> body-parser
+
+	=> jwt-simple
+
+	=> cors
+
+		- express module used to develop the Rest API'S
+		
+		- providing the communication between different
+	          technologies called as Rest API'S
+
+		- mysql module used to interact with the mysql
+	          database
+
+		- mongodb module used to interact with the
+	          mongodb database
+
+		- the stable version of mongodb module is 2.2.32
+
+		- mssql module used to interact with the 
+		  SQL Server
+	
+		- body-parser module used to read the post
+	          parameters 
+
+		- jwt-simple module used to generate the 
+	           tokens
+
+		- cors module used to enable the ports 
+		  communication
+
+
+> yarn add express 
+	   mysql 
+	   mongodb@2.2.32 
+	   mssql 
+	   body-parser 
+	   jwt-simple 	
+	   cors --save
+
+
+
+Step 6.
+	Develop the Rest API'S By Using NodeJS
+
+
+*****************************************
+MiniProject
+	config
+	   token.js
+	   auth.js
+
+	login
+	   login.js
+
+	about
+	   about.js
+
+	portfolio	 
+	   portfolio.js
+
+	contact
+	   contact.js
+
+	logout
+	   logout.js
+
+	server.js
+*****************************************
+
+	- "token.js" file used to store the server side token.
+
+	- "auth.js" file acting as middleware and used to
+	   compare the tokens.
+
+	- "login.js" file used to perform the login 	   	   authentication
+
+	- "about.js" file used to fetch the data from "about"
+	  table present in mysql database
+
+	- "portfolio.js" file used to fetch the data from 
+	   mongodb database
+
+	- "contact.js" file used to fetch the data from
+	   SQLServer
+
+	- "logout.js" file used to delete the server side
+	   token.
+
+	- "server.js" file main server file (node server).
+
+
+Step 7.
+	Start the servers
+
+
+> node server
+
+
+> mongod
+
+
+Step 8.
+	Test the following Rest API'S by using Postman
+
+
+	=> http://localhost:8080/login    (POST)
+
+	=> http://localhost:8080/about    (GET)
+
+	=> http://localhost:8080/portfolio (GET)
+
+	=> http://localhost:8080/contact   (GET)
+
+	=> http://localhost:8080/logout    (GET)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

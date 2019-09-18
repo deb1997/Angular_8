@@ -1,0 +1,89 @@
+			**** Services ****
+
+	- Services are used to share the common business logic
+	  to multiple components.
+
+	- By using services we can overcome data redundancy.
+
+	- we have two types of services
+
+		1) Predefined Services
+
+		2) Custom Services
+
+	- The Services Provided by angular called as Predefined
+	  Services.
+
+	- The Services Developed by us based on application
+	  Requirement called as Custom Services
+
+		    ***** Custom Services *****
+
+	- Injectable is the predefined class used to create the
+	  Custom Services.
+
+	- Injectable class available in @angular/core package
+
+*************************************
+preSer1
+     src
+       app
+	 services
+	    db.service.ts
+	 components
+	    second.component.ts
+	    second.component.html
+
+	    first.component.ts
+	    first.component.html
+
+	 app.module.ts
+       index.html
+**************************************
+
+
+		     ***** Predefined Services *****
+
+	- The Services Provided by angular called as
+	  Predefined Services.
+
+	- "HttpClient" is the Predefined Service introduced in
+	  Angular4.
+
+	- "HttpClient" service used to make the rest api calls
+
+	- "HttpClient" present in "HttpClientModule"
+
+	- "HttpErrorResponse" is the predefined class used to
+	  categorize the errors
+
+	- "HttpClient" , 
+	  "HttpClientModule" and "HttpErrorResponse" present
+	  in @angular/common/http package
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

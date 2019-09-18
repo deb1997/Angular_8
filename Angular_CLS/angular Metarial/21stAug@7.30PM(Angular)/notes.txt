@@ -1,0 +1,18 @@
+namespace
+---------
+    grouping related functionalities called as namespace.
+    namespaces also called as "internal modules" of TypeScript.
+
+Syntax.
+------
+    namespace name{
+        exported members;
+    };
+
+import namespace
+----------------
+///<reference path="name of typescript file with namespace">
+
+[Note : namespace applicable to variables,
+                                functions,
+                                classes and interfaces]

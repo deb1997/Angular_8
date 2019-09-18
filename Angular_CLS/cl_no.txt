@@ -1,0 +1,173 @@
+			**** JSON Server ****
+
+	- JSON Server is ligth weigth server.
+
+	- JSON Server supports only JSON Data.
+
+	- JSON Server used to develop the Rest API Calls Based on 
+	  JSON Data.
+
+	- In General we will test rest api calls by using Postman.
+
+	- we will install JSON Server by using following command.
+
+	  > npm install -g json-server@latest
+
+
+	- we will deploy json files by using following command
+
+	  > json-server --watch products.json
+
+	- by default json server running on port no 3000
+
+
+Rest API Calls
+--------------
+
+1) http://localhost:3000/products
+
+	- above request is GET Request.
+
+	- above request will return all products in the form of a
+	  array.
+
+
+2) http://localhost:3000/products/3
+
+	- above request also GET Request.
+
+	- above request will fetch the particular product information.
+
+	- in above case it will return 3rd product information.
+
+
+
+3) http://localhost:3000/products?p_cost_gte=30000
+
+	- above request also GET Request.
+
+	- above request will return the "p_cost>=30000" records.
+
+
+4) http://localhost:3000/products?p_cost_lte=30000
+
+	- above request also GET Request.
+
+	- above request will return the "p_cost<=30000" records.
+
+
+5) http://localhost:3000/products?_sort=id&_order=desc
+
+	- above request also GET Request.
+
+	- above request will sort the data based on id and return the
+	  data in descending order.
+
+	- "desc" stands for descending order
+	
+	- "asc" stands for ascending order
+
+
+6) http://localhost:3000/products?q=10000
+
+	- above request also GET Request.
+
+	- q stands for "search"
+
+	- above request search the "10000" matched "record" and "return"
+
+
+
+7) http://localhost:3000/products?id_ne=3
+
+	- above request also GET Request.
+
+	- above request excludes the "3rd" id record.
+
+
+8) http://localhost:3000/products?p_name_like=p_
+
+	- above request also GET Request.
+
+	- "_like" is nothing but "regular expression" search.
+
+
+9) http://localhost:3000/products
+
+	- above request i am using like "POST" Request through "Postman".
+
+	- above request accepts the "JSON Object" as "body request" part.
+
+	Ex.
+		{
+	
+		   "id":6,
+	
+		   "p_id":666,
+	
+		   "p_name":"product_six",
+	
+		   "p_cost":600000
+		
+}
+
+	- above request "adds" the 6th record to JSON.
+
+
+10) http://localhost:3000/products/6
+
+	- i am above request as "PUT" request.
+	
+	- in general we will use "PUT" requests for Update Purpose
+
+	- above request takes the "JSON Object" as "request body part"
+
+	Ex.
+
+		{
+	
+		    "id":6,
+	
+		    "p_id":666,
+	
+		    "p_name":"p_six",
+	
+		    "p_cost":60000
+		
+}
+	- in above case 6th record will updated as per PUT Request.
+
+
+
+
+11) http://localhost:3000/products/6
+
+	- i am using above request like "DELETE" Request.
+
+	- above request deletes the 6th Record from JSON.
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
